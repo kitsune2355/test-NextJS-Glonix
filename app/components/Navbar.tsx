@@ -46,8 +46,8 @@ export default function Navbar() {
             <Image
               src="/image/Ellipse.png"
               alt="Globe icon"
-              width={24}
-              height={24}
+              width={30}
+              height={30}
             />
             <span className="px-2">Siriwat Rachanon</span>
             <svg
