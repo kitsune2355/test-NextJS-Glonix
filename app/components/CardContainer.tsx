@@ -19,16 +19,14 @@ const CardContainer: React.FC<CardContainerProps> = ({
           <VideoVertical />
           <p className="text-2xl font-bold py-8">{title}</p>
         </div>
-        <div>
-          {isButton && (
-            <button
-              type="button"
-              className="w-[135px] h-[42px] text-[#A8AD00] border border-[#A8AD00] rounded-[59px] items-center"
-            >
-              ดูทั้งหมด
-            </button>
-          )}
-        </div>
+        {isButton && (
+          <button
+            type="button"
+            className="w-[135px] h-[42px] text-[#A8AD00] border border-[#A8AD00] rounded-[59px] items-center"
+          >
+            ดูทั้งหมด
+          </button>
+        )}
       </div>
       {children}
     </React.Fragment>

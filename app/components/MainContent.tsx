@@ -4,7 +4,7 @@ import CardImage from "./CardImage";
 
 const MainContent: React.FC = () => {
   return (
-    <div className="my-12 flex space-x-6">
+    <div className="mt-24 flex space-x-6">
       <div className="max-w-md">
         <p className="text-lg text-[#00665E] font-medium ">
           Lorem Ipsum is simply dummy .

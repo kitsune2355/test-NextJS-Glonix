@@ -1,4 +1,5 @@
 import { Navbar, Footer, Container, MainContent } from "./components";
+import EducationHub from "./EducationHub";
 import LearningCenter from "./LearningCenter";
 
 export default function Home() {
@@ -6,8 +7,11 @@ export default function Home() {
     <div>
       <Container>
         <Navbar />
-        <MainContent />
-        <LearningCenter />
+        <div className="flex flex-col space-y-24">
+          <MainContent />
+          <LearningCenter />
+          <EducationHub />
+        </div>
       </Container>
       <Footer />
     </div>
