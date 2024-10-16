@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between space-x-4">
           <button
             type="button"
-            className="w-[139px] h-[62px] bg-[#EFEFEF] hover:text-white hover:bg-[#f00]/90 rounded-[18px] text-base font-normal py-4 px-6 text-center inline-flex items-center"
+            className="w-[139px] h-[62px] bg-[#EFEFEF] hover:text-white hover:bg-[#f00]/90 rounded-[18px]   py-4 px-6 text-center inline-flex items-center"
           >
             ออกจากระบบ
           </button>

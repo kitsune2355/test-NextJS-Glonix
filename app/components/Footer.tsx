@@ -79,7 +79,7 @@ const details: detailType[] = [
 
 export default function Footer() {
   return (
-    <div className="bg-[#00665E] w-screen fixed bottom-0 text-white">
+    <div className="bg-[#00665E] bottom-0 text-white">
       <Container>
         <div className="text-6xl font-bold">LOGO</div>
         <hr className="my-8" />
@@ -91,7 +91,7 @@ export default function Footer() {
             >
               <div className="font-bold text-xl py-3">{item.title}</div>
               {item.desc.map((desc, key) => (
-                <div key={key} className="font-normal">
+                <div key={key} className="">
                   {desc.label}
                 </div>
               ))}
@@ -102,7 +102,7 @@ export default function Footer() {
             {details.slice(3, 4).map((item, key) => (
               <div key={key} className="pb-6">
                 <div className="font-bold text-xl py-3">{item.title}</div>
-                <div className="font-normal">{item.desc[0].label}</div>
+                <div className="">{item.desc[0].label}</div>
               </div>
             ))}
             {details.slice(4, 5).map((item, key) => (
