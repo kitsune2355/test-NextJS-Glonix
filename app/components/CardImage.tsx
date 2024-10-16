@@ -40,8 +40,8 @@ const CardImage: React.FC<CardImageProps> = ({
               style={textColorStyle}
               className="p-12 h-full flex flex-col justify-between"
             >
-              <div className="h-[150px] relative top-20 right-[9.5rem] w-[354px]">
-                <p className="text-[26px] font-bold transform -rotate-90 origin-center overflow-wrap break-words">
+              <div className="h-[150px] relative top-[4rem] right-[7rem] w-[279px]">
+                <p className="text-[26px] text-start font-bold transform -rotate-90 origin-center overflow-wrap break-words">
                   {title}
                 </p>
               </div>
