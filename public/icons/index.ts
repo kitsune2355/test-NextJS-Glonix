@@ -10,3 +10,5 @@ export { default as Glass } from "./glass.svg";
 export { default as CloudConnection } from "./cloud-connection.svg";
 export { default as Book } from "./book.svg";
 export { default as ArrowRight } from "./arrow-right.svg";
+export { default as ArrowCircleRight } from "./arrow-circle-right.svg";
+export { default as ArrowCircleLeft } from "./arrow-circle-left.svg";

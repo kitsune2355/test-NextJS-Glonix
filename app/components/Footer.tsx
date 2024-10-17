@@ -91,9 +91,7 @@ export default function Footer() {
             >
               <div className="font-bold text-xl py-3">{item.title}</div>
               {item.desc.map((desc, key) => (
-                <div key={key} className="">
-                  {desc.label}
-                </div>
+                <div key={key}>{desc.label}</div>
               ))}
             </div>
           ))}
@@ -102,7 +100,7 @@ export default function Footer() {
             {details.slice(3, 4).map((item, key) => (
               <div key={key} className="pb-6">
                 <div className="font-bold text-xl py-3">{item.title}</div>
-                <div className="">{item.desc[0].label}</div>
+                <div>{item.desc[0].label}</div>
               </div>
             ))}
             {details.slice(4, 5).map((item, key) => (

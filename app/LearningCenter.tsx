@@ -40,7 +40,7 @@ export default function LearningCenter() {
             {Learning.map((item, key) => (
               <div
                 key={key}
-                className="w-[304px] p-6 bg-white border-gray-200 rounded-3xl shadow"
+                className="w-[304px] p-6 bg-white border-gray-200 rounded-3xl shadow-lg"
               >
                 <div className="flex flex-col justify-between space-y-4">
                   <div className="h-[9rem]">
