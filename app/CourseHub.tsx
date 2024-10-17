@@ -10,6 +10,7 @@ const courseHubList = [
     desc: "รู้และเข้าใจปัจจัยที่ส่งผลกระทบต่อราคาหุ้น",
     bgColor: "#FCFF8B",
     textColor: "#000",
+    opacity: "90%",
   },
   {
     tag: "Data",
@@ -19,24 +20,27 @@ const courseHubList = [
     desc: "การพัฒนา Application ด้วยคอนเซ็ปท์ Progressive Web Application (PWA)",
     bgColor: "#000D2E",
     textColor: "#fff",
+    opacity: "90%",
   },
   {
     tag: "Science",
     name: "วรัทธน์ วงศ์มณีกิจ Co-Founder",
-    img: "/image/Rectangle15.png",
+    img: "/image/Rectangle34.png",
     title: "React Hooks in Action",
     desc: "เรียนรู้การเขียน React Hooks แบบ Best Practice",
     bgColor: "#95FFE5",
     textColor: "#000",
+    opacity: "90%",
   },
   {
     tag: "Tech",
     name: "ทัศน์พล รัชตะสัมฤทธิ์ Software Engineer",
-    img: "/image/Rectangle15.png",
+    img: "/image/Rectangle36.png",
     title: "Generative AI and ChatGPT: Design Thinking Edition",
     desc: "ปลดล็อกขีดจำกัดการทำงานด้วยพลัง AI",
     bgColor: "#06002E",
     textColor: "#fff",
+    opacity: "69%",
   },
 ];
 
@@ -60,6 +64,7 @@ export default function CourseHub() {
                     desc={item.desc}
                     bgColor={item.bgColor}
                     textColor={item.textColor}
+                    opacity={item.opacity}
                   />
                 </div>
               ))}

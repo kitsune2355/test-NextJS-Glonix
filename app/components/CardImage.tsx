@@ -12,6 +12,7 @@ interface CardImageProps {
   isCourseHub?: boolean;
   courseTag?: string;
   courseName?: string;
+  opacity?: string;
 }
 
 const CardImage: React.FC<CardImageProps> = ({
@@ -25,14 +26,15 @@ const CardImage: React.FC<CardImageProps> = ({
   isCourseHub,
   courseTag,
   courseName,
+  opacity,
 }) => {
   const backgroundStyle = {
     backgroundImage: `url(${url})`,
   };
 
   const backgroundColorStyle = {
-    background: `${bgColor}`,
-    opacity: 0.9,
+    background: bgColor,
+    opacity: opacity || "90%",
   };
 
   const textColorStyle = {
