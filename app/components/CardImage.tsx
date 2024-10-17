@@ -72,7 +72,7 @@ const CardImage: React.FC<CardImageProps> = ({
               style={textColorStyle}
               className="p-8 h-full flex flex-col justify-between"
             >
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <button
                   type="button"
                   className="px-4 py-2 text-[#7B7B7B] border border-[#7B7B7B] rounded-[59px] items-center"
