@@ -8,6 +8,7 @@ interface CardImageProps {
   bgColor?: string;
   textColor?: string;
   isRotate?: boolean;
+  avatar?: string;
   isCourseHub?: boolean;
   courseTag?: string;
   courseName?: string;
@@ -20,6 +21,7 @@ const CardImage: React.FC<CardImageProps> = ({
   bgColor,
   textColor,
   isRotate,
+  avatar,
   isCourseHub,
   courseTag,
   courseName,
@@ -56,7 +58,7 @@ const CardImage: React.FC<CardImageProps> = ({
               </div>
               <div className="flex flex-row items-center space-x-2">
                 <Image
-                  src="/image/Ellipse.png"
+                  src="/image/Ellipse3.png"
                   alt="Globe icon"
                   width={55.45}
                   height={55.45}
@@ -68,7 +70,7 @@ const CardImage: React.FC<CardImageProps> = ({
           {isCourseHub && (
             <div
               style={textColorStyle}
-              className="p-12 h-full flex flex-col justify-between"
+              className="p-8 h-full flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <button
@@ -84,8 +86,8 @@ const CardImage: React.FC<CardImageProps> = ({
                 <Image
                   src="/image/Ellipse.png"
                   alt="Globe icon"
-                  width={55.45}
-                  height={55.45}
+                  width={55}
+                  height={55}
                 />
                 <div>
                   <p> {courseName} </p>
@@ -105,8 +107,9 @@ const CardImage: React.FC<CardImageProps> = ({
               </div>
               <div className="flex flex-row items-center space-x-2">
                 <Image
-                  src="/image/Ellipse.png"
-                  alt="Globe icon"
+                  key={avatar}
+                  src={avatar ?? "/image/Ellipse2.png"}
+                  alt="Avatar"
                   width={55.45}
                   height={55.45}
                 />

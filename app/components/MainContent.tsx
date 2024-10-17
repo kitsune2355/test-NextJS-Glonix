@@ -2,6 +2,23 @@ import { SearchNormal } from "@/public/icons";
 import React from "react";
 import CardImage from "./CardImage";
 
+const data = [
+  {
+    title: "Generative ChatGPT: UX Design Edition",
+    url: "/image/Rectangle3.png",
+    avatar: "/image/Ellipse3.png",
+    bgColor: "#95FFE5",
+    textColor: "#000",
+  },
+  {
+    title: "UX Accelerator Bundle",
+    url: "/image/Rectangle9.png",
+    avatar: "/image/Ellipse4.png",
+    bgColor: "#FCFF8B",
+    textColor: "#000",
+  },
+];
+
 const MainContent: React.FC = () => {
   return (
     <div className="mt-24 flex space-x-6">
@@ -46,20 +63,17 @@ const MainContent: React.FC = () => {
         />
       </div>
       <div className="w-[150px] h-[548px] flex flex-row space-x-4">
-        <CardImage
-          url="/image/Rectangle3.png"
-          title="Generative ChatGPT: UX Design Edition"
-          bgColor="#95FFE5"
-          textColor="#000"
-          isRotate
-        />
-        <CardImage
-          url="/image/Rectangle9.png"
-          title="UX Accelerator Bundle"
-          bgColor="#FCFF8B"
-          textColor="#000"
-          isRotate
-        />
+        {data.map((item, key) => (
+          <CardImage
+            key={key}
+            url={item.url}
+            title={item.title}
+            bgColor={item.bgColor}
+            textColor={item.textColor}
+            isRotate
+            avatar={item.avatar}
+          />
+        ))}
       </div>
     </div>
   );
