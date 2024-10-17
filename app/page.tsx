@@ -1,4 +1,5 @@
 import { Navbar, Footer, Container, MainContent } from "./components";
+import CourseHub from "./CourseHub";
 import EducationHub from "./EducationHub";
 import LearningCenter from "./LearningCenter";
 
@@ -13,6 +14,7 @@ export default function Home() {
         </div>
       </Container>
       <EducationHub />
+      <CourseHub />
       <Footer />
     </div>
   );

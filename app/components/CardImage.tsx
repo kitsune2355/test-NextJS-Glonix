@@ -8,6 +8,9 @@ interface CardImageProps {
   bgColor?: string;
   textColor?: string;
   isRotate?: boolean;
+  isCourseHub?: boolean;
+  courseTag?: string;
+  courseName?: string;
 }
 
 const CardImage: React.FC<CardImageProps> = ({
@@ -17,6 +20,9 @@ const CardImage: React.FC<CardImageProps> = ({
   bgColor,
   textColor,
   isRotate,
+  isCourseHub,
+  courseTag,
+  courseName,
 }) => {
   const backgroundStyle = {
     backgroundImage: `url(${url})`,
@@ -33,9 +39,12 @@ const CardImage: React.FC<CardImageProps> = ({
 
   return (
     <div className="w-full h-full relative">
-      <div style={backgroundStyle} className="w-full h-full bg-no-repeat">
+      <div
+        style={backgroundStyle}
+        className="w-full h-full bg-no-repeat rounded-[32px]"
+      >
         <div style={backgroundColorStyle} className="h-full rounded-[32px]">
-          {isRotate ? (
+          {isRotate && (
             <div
               style={textColorStyle}
               className="p-12 h-full flex flex-col justify-between"
@@ -54,7 +63,38 @@ const CardImage: React.FC<CardImageProps> = ({
                 />
               </div>
             </div>
-          ) : (
+          )}
+
+          {isCourseHub && (
+            <div
+              style={textColorStyle}
+              className="p-12 h-full flex flex-col justify-between"
+            >
+              <div className="space-y-4">
+                <button
+                  type="button"
+                  className="px-4 py-2 text-[#7B7B7B] border border-[#7B7B7B] rounded-[59px] items-center"
+                >
+                  {courseTag}
+                </button>
+                <p className="text-[24px] font-bold">{title}</p>
+                <p className="text-xl ">{desc}</p>
+              </div>
+              <div className="flex flex-row items-center space-x-2">
+                <Image
+                  src="/image/Ellipse.png"
+                  alt="Globe icon"
+                  width={55.45}
+                  height={55.45}
+                />
+                <div>
+                  <p> {courseName} </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {!isRotate && !isCourseHub && (
             <div
               style={textColorStyle}
               className="p-12 h-full flex flex-col justify-between"
