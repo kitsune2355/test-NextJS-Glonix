@@ -82,7 +82,7 @@ export default function CourseHub() {
           }
         />
       </Container>
-      <div className="absolute top-[22rem] left-[18rem] right-[18rem] mx-auto max-w-[1382px] flex flex-row justify-between transform -translate-y-1/2">
+      <div className="absolute top-[22rem] left-[16rem] right-[16rem] mx-auto max-w-[1382px] flex flex-row justify-between transform -translate-y-1/2">
         <ArrowCircleLeft />
         <ArrowCircleRight />
       </div>

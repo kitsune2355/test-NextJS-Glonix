@@ -79,7 +79,7 @@ const details: detailType[] = [
 
 export default function Footer() {
   return (
-    <div className="bg-[#00665E] bottom-0 text-white">
+    <div className="bg-[#00665E] bottom-0 text-white mt-14">
       <Container>
         <div className="text-6xl font-bold">LOGO</div>
         <hr className="my-8" />
