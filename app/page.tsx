@@ -3,22 +3,18 @@ import CourseHub from "./CourseHub";
 import EducationHub from "./EducationHub";
 import KnowledgeCenter from "./KnowledgeCenter";
 import LearningCenter from "./LearningCenter";
+import QuestionThread from "./QuestionThread";
 
 export default function Home() {
   return (
     <>
-      <Container>
-        <Navbar />
-        <div className="flex flex-col space-y-24">
-          <MainContent />
-          <LearningCenter />
-        </div>
-      </Container>
+      <Navbar />
+      <MainContent />
+      <LearningCenter />
       <EducationHub />
       <CourseHub />
-      <Container>
-        <KnowledgeCenter />
-      </Container>
+      <KnowledgeCenter />
+      <QuestionThread />
       <Footer />
     </>
   );

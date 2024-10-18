@@ -5,7 +5,7 @@ import {
   Glass,
   Hierarchy,
 } from "@/public/icons";
-import { CardContainer } from "./components";
+import { CardContainer, Container } from "./components";
 
 const Learning = [
   {
@@ -32,7 +32,7 @@ const Learning = [
 
 export default function LearningCenter() {
   return (
-    <div>
+    <Container>
       <CardContainer
         title="เลือกเรียนตามหัวข้อที่สนใจ"
         children={
@@ -61,6 +61,6 @@ export default function LearningCenter() {
           </div>
         }
       />
-    </div>
+    </Container>
   );
 }

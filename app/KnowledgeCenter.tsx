@@ -1,12 +1,5 @@
-import {
-  Book,
-  Clock,
-  CloudConnection,
-  Eye,
-  Glass,
-  Hierarchy,
-} from "@/public/icons";
-import { CardContainer } from "./components";
+import { Clock, Eye } from "@/public/icons";
+import { CardContainer, Container } from "./components";
 import Image from "next/image";
 
 const KnowledgeList = [
@@ -59,7 +52,7 @@ const KnowledgeList = [
 
 export default function KnowledgeCenter() {
   return (
-    <div>
+    <Container>
       <CardContainer
         isButton
         title="บทความและข่าวสารล่าสุด"
@@ -171,6 +164,6 @@ export default function KnowledgeCenter() {
           </div>
         }
       />
-    </div>
+    </Container>
   );
 }

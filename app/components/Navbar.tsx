@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Container from "./Container";
 
 const menu = [
   {
@@ -17,7 +18,7 @@ const menu = [
 ];
 export default function Navbar() {
   return (
-    <div>
+    <Container>
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-between space-x-8">
           <h1 className="text-[#00665E] text-3xl font-semibold">LOGO</h1>
@@ -65,6 +66,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
