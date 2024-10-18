@@ -1,11 +1,12 @@
 import { Navbar, Footer, Container, MainContent } from "./components";
 import CourseHub from "./CourseHub";
 import EducationHub from "./EducationHub";
+import KnowledgeCenter from "./KnowledgeCenter";
 import LearningCenter from "./LearningCenter";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Container>
         <Navbar />
         <div className="flex flex-col space-y-24">
@@ -15,7 +16,10 @@ export default function Home() {
       </Container>
       <EducationHub />
       <CourseHub />
+      <Container>
+        <KnowledgeCenter />
+      </Container>
       <Footer />
-    </div>
+    </>
   );
 }
