@@ -69,9 +69,9 @@ export default function KnowledgeCenter() {
               {KnowledgeList.slice(0, 2).map((item, key) => (
                 <div
                   key={key}
-                  className="h-[413px] flex flex-row bg-white border border-gray-200 rounded-3xl shadow-lg"
+                  className="h-full flex flex-row bg-white border border-gray-200 rounded-3xl shadow-lg"
                 >
-                  <div className="w-[280px] relative overflow-hidden rounded-l-3xl">
+                  <div className="w-full relative overflow-hidden rounded-l-3xl">
                     <div
                       className="absolute inset-0 bg-cover bg-center"
                       style={{
@@ -82,18 +82,18 @@ export default function KnowledgeCenter() {
                       className="absolute inset-0"
                       style={{ backgroundColor: `${item.bgColor}` }}
                     ></div>
-                    <div className="pt-6 px-6 h-full absolute text-white flex flex-col justify-between space-y-4">
+                    <div className="pt-6 px-6 h-full absolute text-white flex flex-col justify-between items-center space-y-4">
                       <div className="text-[26px] font-bold">
                         {item.title.toUpperCase()}
                       </div>
                       <Image
-                        className={`w-full h-auto object-cover overflow-hidden ${
+                        className={`${key === 0 ? "w-[160px]" : "w-full"} ${
                           key === 1 ? "absolute left-0 bottom-12" : ""
-                        }`}
+                        } h-auto object-cover overflow-hidden`}
                         src={item.icon}
                         alt=""
-                        width={550}
-                        height={550}
+                        width={key === 0 ? 160 : 100}
+                        height={100}
                       />
                     </div>
                   </div>
@@ -110,17 +110,17 @@ export default function KnowledgeCenter() {
                           <div className="text-xl font-bold">
                             {item.subTitle}
                           </div>
-                          <div>{item.desc}</div>
+                          <div className="text-[#313131]">{item.desc}</div>
                         </div>
                       </div>
                       <div className="space-y-4">
                         <div className="flex items-center space-x-2">
                           <Clock />
-                          <p>29 กรกฎาคม 2023</p>
+                          <p className="text-[#313131]">29 กรกฎาคม 2023</p>
                         </div>
                         <div className="flex items-center space-x-2">
                           <Eye />
-                          <p>เข้าชม 240 ครั้ง</p>
+                          <p className="text-[#313131]">เข้าชม 240 ครั้ง</p>
                         </div>
                       </div>
                     </div>
@@ -161,7 +161,7 @@ export default function KnowledgeCenter() {
                       </button>
                       <div className="space-y-2">
                         <div className="text-xl font-bold">{item.subTitle}</div>
-                        <div>{item.desc}</div>
+                        <div className="text-[#313131]">{item.desc}</div>
                       </div>
                     </div>
                   </div>
