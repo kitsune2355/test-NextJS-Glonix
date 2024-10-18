@@ -4,7 +4,9 @@ import { CardContainer, CardImage, Container } from "./components";
 const courseHubList = [
   {
     tag: "Business",
-    name: "ณัฐกานต์ สิทธิชัยอนันต์ CEO Y.I.M Corporation",
+    name: "ณัฐกานต์ สิทธิชัยอนันต์",
+    position: "CEO Y.I.M Corporation",
+    avatar: "/image/Ellipse5.png",
     img: "/image/Rectangle15.png",
     title: "ลงทุนหุ้นมั่นใจ ต้องเข้าใจปัจจัยพื้นฐาน",
     desc: "รู้และเข้าใจปัจจัยที่ส่งผลกระทบต่อราคาหุ้น",
@@ -14,7 +16,9 @@ const courseHubList = [
   },
   {
     tag: "Data",
-    name: "ปัญจมพงศ์ เสริมสวัสดิ์ศรี Google Developers",
+    name: "ปัญจมพงศ์ เสริมสวัสดิ์ศรี",
+    position: "Google Developers",
+    avatar: "/image/Ellipse6.png",
     img: "/image/Rectangle32.png",
     title: "Progressive Web Application",
     desc: "การพัฒนา Application ด้วยคอนเซ็ปท์ Progressive Web Application (PWA)",
@@ -24,7 +28,9 @@ const courseHubList = [
   },
   {
     tag: "Science",
-    name: "วรัทธน์ วงศ์มณีกิจ Co-Founder",
+    name: "วรัทธน์ วงศ์มณีกิจ",
+    position: "Co-Founder",
+    avatar: "/image/Ellipse7.png",
     img: "/image/Rectangle34.png",
     title: "React Hooks in Action",
     desc: "เรียนรู้การเขียน React Hooks แบบ Best Practice",
@@ -34,7 +40,9 @@ const courseHubList = [
   },
   {
     tag: "Tech",
-    name: "ทัศน์พล รัชตะสัมฤทธิ์ Software Engineer",
+    name: "ทัศน์พล รัชตะสัมฤทธิ์",
+    position: "Software Engineer",
+    avatar: "/image/Ellipse8.png",
     img: "/image/Rectangle36.png",
     title: "Generative AI and ChatGPT: Design Thinking Edition",
     desc: "ปลดล็อกขีดจำกัดการทำงานด้วยพลัง AI",
@@ -59,6 +67,8 @@ export default function CourseHub() {
                     isCourseHub
                     courseTag={item.tag}
                     courseName={item.name}
+                    coursePosition={item.position}
+                    avatar={item.avatar}
                     url={item.img}
                     title={item.title}
                     desc={item.desc}

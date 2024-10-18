@@ -12,6 +12,7 @@ interface CardImageProps {
   isCourseHub?: boolean;
   courseTag?: string;
   courseName?: string;
+  coursePosition?: string;
   opacity?: string;
 }
 
@@ -26,6 +27,7 @@ const CardImage: React.FC<CardImageProps> = ({
   isCourseHub,
   courseTag,
   courseName,
+  coursePosition,
   opacity,
 }) => {
   const backgroundStyle = {
@@ -60,7 +62,7 @@ const CardImage: React.FC<CardImageProps> = ({
             </div>
             <div className="flex flex-row items-center space-x-2">
               <Image
-                src="/image/Ellipse3.png"
+                src={avatar ?? "/image/Ellipse2.png"}
                 alt="Globe icon"
                 width={55.45}
                 height={55.45}
@@ -88,13 +90,15 @@ const CardImage: React.FC<CardImageProps> = ({
             </div>
             <div className="flex flex-row items-center space-x-2">
               <Image
-                src="/image/Ellipse.png"
+                className="h-full"
+                src={avatar ?? "/image/Ellipse2.png"}
                 alt="Globe icon"
                 width={55}
                 height={55}
               />
               <div>
-                <p>{courseName}</p>
+                <p className="font-bold">{courseName}</p>
+                <p>{coursePosition}</p>
               </div>
             </div>
           </div>
@@ -119,7 +123,7 @@ const CardImage: React.FC<CardImageProps> = ({
               height={55.45}
             />
             <div>
-              <p>ณัฐกานต์ สิทธิชัยอนันต์</p>
+              <p className="font-bold">ณัฐกานต์ สิทธิชัยอนันต์</p>
               <p>CEO Y.I.M Corporation</p>
             </div>
           </div>
