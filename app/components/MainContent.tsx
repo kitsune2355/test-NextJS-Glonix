@@ -62,17 +62,18 @@ const MainContent: React.FC = () => {
           textColor="#fff"
         />
       </div>
-      <div className="w-[150px] h-[548px] flex flex-row space-x-4">
+      <div className="flex flex-row space-x-4">
         {data.map((item, key) => (
-          <CardImage
-            key={key}
-            url={item.url}
-            title={item.title}
-            bgColor={item.bgColor}
-            textColor={item.textColor}
-            isRotate
-            avatar={item.avatar}
-          />
+          <div key={key} className="relative w-[150px] h-full flex-shrink-0">
+            <CardImage
+              url={item.url}
+              title={item.title}
+              bgColor={item.bgColor}
+              textColor={item.textColor}
+              isRotate
+              avatar={item.avatar}
+            />
+          </div>
         ))}
       </div>
     </div>
