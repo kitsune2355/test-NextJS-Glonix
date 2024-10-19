@@ -83,7 +83,7 @@ export default function Footer() {
       <Container>
         <div className="text-6xl font-bold">LOGO</div>
         <hr className="my-8" />
-        <div className="flex gap-12">
+        <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-12">
           {details.slice(0, 3).map((item, key) => (
             <div
               key={key}
@@ -116,9 +116,11 @@ export default function Footer() {
           </div>
         </div>
         <hr className="my-8" />
-        <div className="flex justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-between">
           <p>Y.I.M Corporation @ 2023. All rights reserved.</p>
-          <p>0-3835-4580-4 , 0-3835-2611-6</p>
+          <p className="md:text-end sm:text-start">
+            0-3835-4580-4 , 0-3835-2611-6
+          </p>
         </div>
       </Container>
     </div>
