@@ -62,7 +62,7 @@ export default function CourseHub() {
           children={
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {courseHubList.map((item, key) => (
-                <div key={key} className="w-[304px] h-[548px]">
+                <div key={key} className="w-full h-[548px]">
                   <CardImage
                     isCourseHub
                     courseTag={item.tag}
@@ -82,7 +82,7 @@ export default function CourseHub() {
           }
         />
       </Container>
-      <div className="absolute top-[22rem] left-[16rem] right-[16rem] mx-auto max-w-[1382px] hidden lg:flex flex-row justify-between transform -translate-y-1/2">
+      <div className="absolute top-[22rem] left-[16rem] right-[16rem] mx-auto max-w-[75vw] hidden lg:flex flex-row justify-between transform -translate-y-1/2">
         <ArrowCircleLeft />
         <ArrowCircleRight />
       </div>

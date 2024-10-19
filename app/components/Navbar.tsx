@@ -28,7 +28,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between space-x-8">
           <h1 className="text-[#00665E] text-3xl font-semibold">LOGO</h1>
           {/* Desktop */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden lg:flex space-x-8">
             {menu.map((item, key) => (
               <Link
                 key={key}
@@ -42,7 +42,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile */}
-        <div className="md:hidden flex flex-row space-x-4">
+        <div className="lg:hidden flex flex-row space-x-4">
           <button onClick={() => setIsOpen(!isOpen)}>
             <svg
               width="24"
@@ -89,7 +89,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="hidden md:flex items-center justify-between space-x-4">
+        <div className="hidden lg:flex items-center justify-between space-x-4">
           <button
             type="button"
             className="w-[139px] h-[62px] bg-[#EFEFEF] hover:text-white hover:bg-[#f00]/90 rounded-[18px] py-4 px-6 text-center inline-flex items-center"
@@ -125,7 +125,7 @@ export default function Navbar() {
 
       {/* Mobile */}
       {isOpen && (
-        <div className="absolute w-[100vw] top-20 flex flex-col md:hidden bg-[#1C1C29] shadow-lg rounded-b-lg ">
+        <div className="absolute w-[100vw] top-20 flex flex-col lg:hidden bg-[#1C1C29] shadow-lg rounded-b-lg ">
           {menu.map((item, key) => (
             <Link
               key={key}

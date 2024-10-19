@@ -45,7 +45,7 @@ export default function EducationHub() {
               {Education.map((item, key) => (
                 <div
                   key={key}
-                  className="w-[304px] h-full bg-white border border-gray-200 rounded-3xl shadow-lg"
+                  className="w-full h-full bg-white border border-gray-200 rounded-3xl shadow-lg"
                 >
                   <div className="relative h-[152px] overflow-hidden rounded-t-3xl">
                     <div
@@ -83,7 +83,7 @@ export default function EducationHub() {
           }
         />
       </Container>
-      <div className="absolute top-[18rem] left-[16rem] right-[16rem] mx-auto max-w-[1382px] hidden lg:flex flex-row justify-between transform -translate-y-1/2">
+      <div className="absolute top-[18rem] left-[16rem] right-[16rem] mx-auto max-w-[75vw] hidden lg:flex flex-row justify-between transform -translate-y-1/2">
         <ArrowCircleLeft />
         <ArrowCircleRight />
       </div>

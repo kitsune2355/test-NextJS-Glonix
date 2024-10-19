@@ -96,7 +96,7 @@ export default function Footer() {
             </div>
           ))}
 
-          <div className="w-[284px] overflow-wrap break-words">
+          <div className="w-full overflow-wrap break-words">
             {details.slice(3, 4).map((item, key) => (
               <div key={key} className="pb-6">
                 <div className="font-bold text-xl py-3">{item.title}</div>

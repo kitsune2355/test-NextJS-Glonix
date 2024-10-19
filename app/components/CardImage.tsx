@@ -90,11 +90,11 @@ const CardImage: React.FC<CardImageProps> = ({
             </div>
             <div className="flex flex-row items-center space-x-2">
               <Image
-                className="h-full"
+                className=""
                 src={avatar ?? "/image/Ellipse2.png"}
                 alt="Globe icon"
-                width={55}
-                height={55}
+                width={50}
+                height={50}
               />
               <div>
                 <p className="font-bold">{courseName}</p>
