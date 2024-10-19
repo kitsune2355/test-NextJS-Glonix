@@ -125,7 +125,7 @@ export default function KnowledgeCenter() {
               {KnowledgeList.slice(2, 6).map((item, key) => (
                 <div
                   key={key}
-                  className="h-[269px] flex flex-row bg-white border border-gray-200 rounded-3xl shadow-lg"
+                  className="h-full flex flex-row bg-white border border-gray-200 rounded-3xl shadow-lg"
                 >
                   <div className="w-[20.4rem] relative overflow-hidden rounded-l-3xl">
                     <div

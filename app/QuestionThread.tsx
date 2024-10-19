@@ -35,7 +35,7 @@ const QuestionThread: React.FC = () => {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="bg-[#A8AD00] text-white w-[185px] px-[3.69rem] py-[0.63rem] rounded-xl"
+                  className="bg-[#A8AD00] text-white w-full lg:w-[185px] px-[3.69rem] py-[0.63rem] rounded-xl"
                 >
                   ส่ง
                 </button>

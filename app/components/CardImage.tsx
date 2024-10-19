@@ -55,12 +55,12 @@ const CardImage: React.FC<CardImageProps> = ({
           style={textColorStyle}
         >
           <div className="w-full h-full flex flex-col justify-between">
-            <div className="h-[150px] relative top-[4rem] right-[7rem] w-[279px]">
-              <p className="text-[26px] text-start font-bold transform -rotate-90 origin-center overflow-wrap break-words">
+            <div className="h-[150px] relative md:top-[4rem] md:right-[6.5rem] md:w-[279px]">
+              <p className="text-[26px] text-start font-bold transform md:-rotate-90 origin-center overflow-wrap break-words">
                 {title}
               </p>
             </div>
-            <div className="flex flex-row items-center space-x-2">
+            <div className="flex flex-row md:justify-center items-center space-x-2">
               <Image
                 src={avatar ?? "/image/Ellipse2.png"}
                 alt="Globe icon"
