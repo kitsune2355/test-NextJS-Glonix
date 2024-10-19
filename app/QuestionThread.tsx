@@ -15,8 +15,8 @@ const QuestionThread: React.FC = () => {
         title="ตั้งกระทู้คำถาม"
         children={
           <div className="w-full h-full bg-white border border-gray-200 rounded-3xl shadow-lg p-12">
-            <div className="flex-1 flex flex-col space-y-12">
-              <div>
+            <div className="flex-1 flex flex-col space-y-6">
+              <div className="space-y-4">
                 <label htmlFor="default-input" className="text-xl font-bold">
                   หัวข้อกระทู้
                 </label>
@@ -26,7 +26,7 @@ const QuestionThread: React.FC = () => {
                   className="w-full p-4 text-sm text-gray-900 border border-[#D9D9D9] rounded-xl focus:outline-none focus:ring focus:ring-[#D9D9D9]"
                 />
               </div>
-              <div>
+              <div className="space-y-4">
                 <label htmlFor="default-input" className="text-xl font-bold">
                   เนื้อหา
                 </label>

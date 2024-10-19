@@ -75,8 +75,8 @@ export default function KnowledgeCenter() {
                       className="absolute inset-0"
                       style={{ backgroundColor: `${item.bgColor}` }}
                     ></div>
-                    <div className="pt-6 px-6 h-full absolute text-white flex flex-col justify-between items-center space-y-4">
-                      <div className="text-[26px] font-bold">
+                    <div className="pt-10 px-10 h-full absolute text-white flex flex-col justify-between items-center space-y-4">
+                      <div className="w-[13rem] text-[26px] font-bold">
                         {item.title.toUpperCase()}
                       </div>
                       <Image
@@ -127,7 +127,7 @@ export default function KnowledgeCenter() {
                   key={key}
                   className="h-[269px] flex flex-row bg-white border border-gray-200 rounded-3xl shadow-lg"
                 >
-                  <div className="w-[214px] relative overflow-hidden rounded-l-3xl">
+                  <div className="w-[20.4rem] relative overflow-hidden rounded-l-3xl">
                     <div
                       className="absolute inset-0 bg-cover bg-center"
                       style={{

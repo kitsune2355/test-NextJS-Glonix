@@ -42,7 +42,7 @@ const MainContent: React.FC = () => {
               <span className="relative text-[52px] text-[#00665E] font-semibold ">
                 Lorem
                 <svg
-                  className="absolute top-16 left-0"
+                  className="absolute top-20 -left-5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="258"
                   height="27"
@@ -66,13 +66,13 @@ const MainContent: React.FC = () => {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-full p-4 ps-10 text-sm text-gray-900 border border-[#D9D9D9] rounded-xl focus:outline-none focus:ring focus:ring-[#D9D9D9]"
+                  className="block w-full p-4 ps-10 text-2xl text-gray-900 border border-[#D9D9D9] rounded-xl focus:outline-none focus:ring focus:ring-[#D9D9D9]"
                   placeholder="ค้นหาหลักสูตร"
                   required
                 />
                 <button
                   type="submit"
-                  className="absolute top-0 end-0 p-2.5 text-sm font-medium w-[143px] h-full text-white bg-[#A8AD00] rounded-e-lg border "
+                  className="absolute top-0 end-0 p-2.5 text-2xl font-medium w-[143px] h-full text-white bg-[#A8AD00] rounded-e-lg border "
                 >
                   ค้นหา
                 </button>

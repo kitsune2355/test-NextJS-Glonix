@@ -56,12 +56,19 @@ export default function EducationHub() {
                       className="absolute inset-0"
                       style={{ backgroundColor: `${item.bgColor}` }}
                     ></div>
-                    <div className="p-6 absolute  text-white">{item.title}</div>
+                    <div className="p-6 absolute  text-white font-semibold">
+                      {item.title}
+                    </div>
                   </div>
                   <div className="p-6 flex flex-col justify-between space-y-8">
                     <div>{item.desc}</div>
                     <div className="space-y-2">
-                      <div>เรียนไปแล้ว {item.percent}</div>
+                      <div>
+                        เรียนไปแล้ว{" "}
+                        <span className="text-black font-bold">
+                          {item.percent}
+                        </span>
+                      </div>
                       <div className="w-full bg-[#EEEEEE] rounded-full h-2.5">
                         <div
                           className="bg-[#A8AD00] h-2.5 rounded-full"
