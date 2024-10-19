@@ -52,8 +52,8 @@ const MainContent: React.FC = () => {
                   <path
                     d="M3.99997 22.7138C49.0067 10.9946 116.007 -6.15131 254.607 10.9946"
                     stroke="#A8AD00"
-                    stroke-width="6"
-                    stroke-linecap="square"
+                    strokeWidth="6"
+                    strokeLinecap="square"
                   />
                 </svg>
               </span>
