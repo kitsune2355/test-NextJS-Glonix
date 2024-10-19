@@ -36,32 +36,49 @@ const MainContent: React.FC = () => {
           <p className="text-lg text-[#00665E] font-medium ">
             Lorem Ipsum is simply dummy .
           </p>
-          <p className="text-[52px] text-black font-semibold ">
-            learn anytime, anywhere with
-            <span className="text-[52px] text-[#00665E] font-semibold ">
-              Lorem
-            </span>
-          </p>
-          <form>
-            <div className="relative">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <SearchNormal />
+          <div className="space-y-20">
+            <p className="text-[52px] text-black font-semibold ">
+              learn anytime, anywhere with{" "}
+              <span className="relative text-[52px] text-[#00665E] font-semibold ">
+                Lorem
+                <svg
+                  className="absolute top-16 left-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="258"
+                  height="27"
+                  viewBox="0 0 258 27"
+                  fill="none"
+                >
+                  <path
+                    d="M3.99997 22.7138C49.0067 10.9946 116.007 -6.15131 254.607 10.9946"
+                    stroke="#A8AD00"
+                    stroke-width="6"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </span>
+            </p>
+            <form>
+              <div className="relative">
+                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <SearchNormal />
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  className="block w-full p-4 ps-10 text-sm text-gray-900 border border-[#D9D9D9] rounded-xl focus:outline-none focus:ring focus:ring-[#D9D9D9]"
+                  placeholder="ค้นหาหลักสูตร"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="absolute top-0 end-0 p-2.5 text-sm font-medium w-[143px] h-full text-white bg-[#A8AD00] rounded-e-lg border "
+                >
+                  ค้นหา
+                </button>
               </div>
-              <input
-                type="search"
-                id="default-search"
-                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-[#D9D9D9] rounded-xl focus:outline-none focus:ring focus:ring-[#D9D9D9]"
-                placeholder="ค้นหาหลักสูตร"
-                required
-              />
-              <button
-                type="submit"
-                className="absolute top-0 end-0 p-2.5 text-sm font-medium w-[143px] h-full text-white bg-[#A8AD00] rounded-e-lg border "
-              >
-                ค้นหา
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
         <div className="w-full h-[34.25rem] flex justify-between space-x-4">
           {data.slice(0, 1).map((item, key) => (
