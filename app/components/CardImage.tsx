@@ -3,7 +3,7 @@ import React from "react";
 
 interface CardImageProps {
   url: string;
-  title: string;
+  title: string | React.ReactNode;
   desc?: string;
   bgColor?: string;
   textColor?: string;

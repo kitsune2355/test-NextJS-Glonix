@@ -38,7 +38,7 @@ const MainContent: React.FC = () => {
           </p>
           <div className="space-y-20">
             <p className="text-[52px] text-black font-semibold ">
-              learn anytime, anywhere with{" "}
+              learn anytime, anywhere <br /> with{" "}
               <span className="relative text-[52px] text-[#00665E] font-semibold ">
                 Lorem
                 <svg
@@ -100,7 +100,15 @@ const MainContent: React.FC = () => {
             >
               <CardImage
                 url={item.url}
-                title={item.title}
+                title={
+                  key === 1 ? (
+                    <>
+                      UX Accelerator <br /> Bundle
+                    </>
+                  ) : (
+                    item.title
+                  )
+                }
                 bgColor={item.bgColor}
                 textColor={item.textColor}
                 isRotate

@@ -17,7 +17,7 @@ const CardContainer: React.FC<CardContainerProps> = ({
       <div className="w-full flex justify-between items-center">
         <div className="flex flex-row items-center space-x-4">
           <VideoVertical />
-          <p className="text-2xl font-bold py-8">{title}</p>
+          <p className="text-black text-2xl font-bold py-8">{title}</p>
         </div>
         {isButton && (
           <button
