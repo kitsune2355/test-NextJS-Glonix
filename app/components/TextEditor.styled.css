@@ -1,0 +1,15 @@
+.custom-quill .ql-container {
+    border-radius: 12px;
+    border: 1px solid #D9D9D9;
+    height: 200px;
+    padding: 10px;
+  }
+  
+  .custom-quill .ql-toolbar {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .custom-quill .ql-container {
+    border-radius: 0 0 12px 12px;
+  }
+  
