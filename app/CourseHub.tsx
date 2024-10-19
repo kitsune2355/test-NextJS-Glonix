@@ -60,7 +60,7 @@ export default function CourseHub() {
           isButton
           title="คอร์สออนไลน์"
           children={
-            <div className="flex flex-row space-x-4">
+            <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-4">
               {courseHubList.map((item, key) => (
                 <div key={key} className="w-[304px] h-[548px]">
                   <CardImage

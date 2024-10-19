@@ -23,7 +23,7 @@ const data = [
 const MainContent: React.FC = () => {
   return (
     <Container>
-      <div className="flex justify-around space-x-6">
+      <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
         <div className="max-w-md">
           <p className="text-lg text-[#00665E] font-medium ">
             Lorem Ipsum is simply dummy .

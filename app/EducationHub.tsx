@@ -41,7 +41,7 @@ export default function EducationHub() {
           isButton
           title="คอร์สของฉัน"
           children={
-            <div className="flex flex-row space-x-4">
+            <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-4">
               {Education.map((item, key) => (
                 <div
                   key={key}
