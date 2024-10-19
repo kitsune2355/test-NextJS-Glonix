@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "./Container";
+import { useState } from "react";
 
 const menu = [
   {
@@ -16,27 +18,81 @@ const menu = [
     path: "/",
   },
 ];
+
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Container>
-      <div className="flex items-center justify-between">
+      <div className="relative w-full flex items-center justify-between">
         <div className="flex items-center justify-between space-x-8">
           <h1 className="text-[#00665E] text-3xl font-semibold">LOGO</h1>
-          {menu.map((item, key) => (
-            <div key={key}>
+          {/* Desktop */}
+          <div className="hidden md:flex space-x-8">
+            {menu.map((item, key) => (
               <Link
+                key={key}
                 href={item.path}
                 className="hover:underline text-[#6A6A6A] text-xl hover:text-[#00665E]"
               >
                 {item.label}
               </Link>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <div className="flex items-center justify-between space-x-4">
+
+        {/* Mobile */}
+        <div className="md:hidden flex flex-row space-x-4">
+          <button onClick={() => setIsOpen(!isOpen)}>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 6h18M3 12h18m-18 6h18"
+                stroke="#6A6A6A"
+                strokeWidth="2"
+              />
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z"
+              />
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                <path
+                  fill="currentColor"
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.5 9.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0m9.758 7.484A7.99 7.99 0 0 1 12 20a7.99 7.99 0 0 1-6.258-3.016C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+
+        <div className="hidden md:flex items-center justify-between space-x-4">
           <button
             type="button"
-            className="w-[139px] h-[62px] bg-[#EFEFEF] hover:text-white hover:bg-[#f00]/90 rounded-[18px]   py-4 px-6 text-center inline-flex items-center"
+            className="w-[139px] h-[62px] bg-[#EFEFEF] hover:text-white hover:bg-[#f00]/90 rounded-[18px] py-4 px-6 text-center inline-flex items-center"
           >
             ออกจากระบบ
           </button>
@@ -66,6 +122,21 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Mobile */}
+      {isOpen && (
+        <div className="absolute w-[100vw] top-20 flex flex-col md:hidden bg-[#1C1C29] shadow-lg rounded-b-lg ">
+          {menu.map((item, key) => (
+            <Link
+              key={key}
+              href={item.path}
+              className="text-center text-white text-xl hover:bg-[#00665E]/90 p-4"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
     </Container>
   );
 }

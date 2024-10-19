@@ -36,7 +36,7 @@ export default function LearningCenter() {
       <CardContainer
         title="เลือกเรียนตามหัวข้อที่สนใจ"
         children={
-          <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {Learning.map((item, key) => (
               <div
                 key={key}

@@ -80,14 +80,14 @@ const details: detailType[] = [
 export default function Footer() {
   return (
     <div className="bg-[#00665E] bottom-0 text-white mt-14">
-      <Container>
+      <Container isFooter>
         <div className="text-6xl font-bold">LOGO</div>
-        <hr className="my-8" />
-        <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-12">
+        <hr className="w-full my-8" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {details.slice(0, 3).map((item, key) => (
             <div
               key={key}
-              className="w-[284px] overflow-wrap break-words space-y-3"
+              className="w-full overflow-wrap break-words space-y-3"
             >
               <div className="font-bold text-xl py-3">{item.title}</div>
               {item.desc.map((desc, key) => (
@@ -115,10 +115,10 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <hr className="my-8" />
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-between">
+        <hr className="w-full my-8" />
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-between">
           <p>Y.I.M Corporation @ 2023. All rights reserved.</p>
-          <p className="md:text-end sm:text-start">
+          <p className="text-start md:text-end lg:text-end">
             0-3835-4580-4 , 0-3835-2611-6
           </p>
         </div>

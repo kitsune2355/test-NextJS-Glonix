@@ -57,7 +57,7 @@ export default function KnowledgeCenter() {
         isButton
         title="บทความและข่าวสารล่าสุด"
         children={
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="w-full grid grid-cols-1 gap-4">
               {KnowledgeList.slice(0, 2).map((item, key) => (
                 <div
@@ -91,7 +91,7 @@ export default function KnowledgeCenter() {
                     </div>
                   </div>
                   <div className="p-6 w-full">
-                    <div className="h-full flex flex-col justify-between ">
+                    <div className="h-full flex flex-col justify-between space-y-12">
                       <div className="space-y-4">
                         <button
                           type="button"
@@ -121,7 +121,7 @@ export default function KnowledgeCenter() {
                 </div>
               ))}
             </div>
-            <div className="w-full grid grid-cols-1 gap-4">
+            <div className="w-full h-full grid grid-cols-1 gap-4">
               {KnowledgeList.slice(2, 6).map((item, key) => (
                 <div
                   key={key}

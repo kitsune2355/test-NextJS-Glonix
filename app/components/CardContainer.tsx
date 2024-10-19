@@ -14,7 +14,7 @@ const CardContainer: React.FC<CardContainerProps> = ({
 }) => {
   return (
     <React.Fragment>
-      <div className="flex justify-between items-center">
+      <div className="w-full flex justify-between items-center">
         <div className="flex flex-row items-center space-x-4">
           <VideoVertical />
           <p className="text-2xl font-bold py-8">{title}</p>

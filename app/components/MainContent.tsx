@@ -5,6 +5,14 @@ import Container from "./Container";
 
 const data = [
   {
+    title: "Generative AI and ChatGPT: Design Thinking Edition",
+    desc: "ปลดล็อกขีดจำกัดการทำงาน ด้วยพลัง AI",
+    url: "/image/Rectangle2.png",
+    avatar: "/image/Ellipse3.png",
+    bgColor: "#002E2A",
+    textColor: "#fff",
+  },
+  {
     title: "Generative ChatGPT: UX Design Edition",
     url: "/image/Rectangle3.png",
     avatar: "/image/Ellipse3.png",
@@ -23,13 +31,13 @@ const data = [
 const MainContent: React.FC = () => {
   return (
     <Container>
-      <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
-        <div className="max-w-md">
+      <div className="w-full flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-12">
+        <div className="w-full lg:max-w-md">
           <p className="text-lg text-[#00665E] font-medium ">
             Lorem Ipsum is simply dummy .
           </p>
           <p className="text-[52px] text-black font-semibold ">
-            learn anytime, anywhere with{" "}
+            learn anytime, anywhere with
             <span className="text-[52px] text-[#00665E] font-semibold ">
               Lorem
             </span>
@@ -55,33 +63,34 @@ const MainContent: React.FC = () => {
             </div>
           </form>
         </div>
-        <div className="w-full flex flex-row justify-end space-x-6">
-          <div className="w-[412px] h-[548px]">
-            <CardImage
-              url="/image/Rectangle2.png"
-              title="Generative AI and ChatGPT: Design Thinking Edition"
-              desc="ปลดล็อกขีดจำกัดการทำงาน ด้วยพลัง AI"
-              bgColor="#002E2A"
-              textColor="#fff"
-            />
-          </div>
-          <div className="flex flex-row space-x-4">
-            {data.map((item, key) => (
-              <div
+        <div className="w-full h-[34.25rem] flex justify-between space-x-4">
+          {data.slice(0, 1).map((item, key) => (
+            <div key={key} className="w-[25.75rem]">
+              <CardImage
                 key={key}
-                className="relative w-[150px] h-full flex-shrink-0"
-              >
-                <CardImage
-                  url={item.url}
-                  title={item.title}
-                  bgColor={item.bgColor}
-                  textColor={item.textColor}
-                  isRotate
-                  avatar={item.avatar}
-                />
-              </div>
-            ))}
-          </div>
+                url={item.url}
+                title={item.title}
+                desc={item.desc}
+                bgColor={item.bgColor}
+                textColor={item.textColor}
+              />
+            </div>
+          ))}
+          {data.slice(1, 3).map((item, key) => (
+            <div
+              key={key}
+              className="relative w-[9.375rem] h-full flex-shrink-0"
+            >
+              <CardImage
+                url={item.url}
+                title={item.title}
+                bgColor={item.bgColor}
+                textColor={item.textColor}
+                isRotate
+                avatar={item.avatar}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </Container>
