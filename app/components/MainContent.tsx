@@ -31,8 +31,8 @@ const data = [
 const MainContent: React.FC = () => {
   return (
     <Container>
-      <div className="grid grid-cols-1 lg:grid-cols-10 gap-4">
-        <div className="col-span-4">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div className="col-span-5">
           <div className="w-full lg:max-w-md">
             <p className="text-lg text-[#00665E] font-medium ">
               Lorem Ipsum is simply dummy .
@@ -82,9 +82,9 @@ const MainContent: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="md:col-span-2">
+        <div className="col-span-7">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <div className="md:col-span-3">
               {data.slice(0, 1).map((item, key) => (
                 <div key={key} className="h-[34.25rem]">
                   <CardImage
@@ -102,15 +102,7 @@ const MainContent: React.FC = () => {
               <div key={key} className="relative h-full flex-shrink-0">
                 <CardImage
                   url={item.url}
-                  title={
-                    key === 1 ? (
-                      <>
-                        UX Accelerator <br /> Bundle
-                      </>
-                    ) : (
-                      item.title
-                    )
-                  }
+                  title={item.title}
                   bgColor={item.bgColor}
                   textColor={item.textColor}
                   isRotate

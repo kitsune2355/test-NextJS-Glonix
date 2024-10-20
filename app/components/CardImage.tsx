@@ -55,8 +55,8 @@ const CardImage: React.FC<CardImageProps> = ({
           style={textColorStyle}
         >
           <div className="w-full h-full flex flex-col justify-between">
-            <div className="h-[150px] relative md:top-[4rem] md:right-[6.5rem] md:w-[279px]">
-              <p className="text-[26px] text-start font-bold transform md:-rotate-90 origin-center overflow-wrap break-words">
+            <div className="relative transform md:-rotate-90 origin-center md:top-[4rem] md:right-[7.5rem] md:w-[279px]">
+              <p className="text-[26px] text-start font-bold w-[270px] line-clamp-2">
                 {title}
               </p>
             </div>
@@ -85,8 +85,10 @@ const CardImage: React.FC<CardImageProps> = ({
               >
                 {courseTag}
               </button>
-              <p className="text-[24px] font-bold">{title}</p>
-              <p className="text-xl">{desc}</p>
+              <p className="text-[24px] font-bold line-clamp-4 w-[11.7rem]">
+                {title}
+              </p>
+              <p className="text-xl line-clamp-4 w-[14rem]">{desc}</p>
             </div>
             <div className="flex flex-row items-center space-x-2">
               <Image
@@ -110,9 +112,11 @@ const CardImage: React.FC<CardImageProps> = ({
           className="relative p-12 h-full flex flex-col justify-between"
           style={textColorStyle}
         >
-          <div>
-            <p className="text-[32px] font-bold">{title}</p>
-            <p className="text-2xl">{desc}</p>
+          <div className="space-y-4">
+            <p className="text-[32px] font-bold line-clamp-4 w-[16rem]">
+              {title}
+            </p>
+            <p className="text-2xl line-clamp-2 w-[18rem]">{desc}</p>
           </div>
           <div className="flex flex-row items-center space-x-2">
             <Image

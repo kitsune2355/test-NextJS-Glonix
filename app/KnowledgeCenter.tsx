@@ -62,7 +62,7 @@ export default function KnowledgeCenter() {
               {KnowledgeList.slice(0, 2).map((item, key) => (
                 <div
                   key={key}
-                  className="h-full flex flex-row bg-white border border-gray-200 rounded-3xl shadow-lg"
+                  className="h-[25.8rem] flex flex-row bg-white border border-gray-200 rounded-3xl shadow-sm"
                 >
                   <div className="w-full relative overflow-hidden rounded-l-3xl">
                     <div
@@ -76,13 +76,25 @@ export default function KnowledgeCenter() {
                       style={{ backgroundColor: `${item.bgColor}` }}
                     ></div>
                     <div className="pt-10 px-10 h-full absolute text-white flex flex-col justify-between items-center space-y-4">
-                      <div className="w-[13rem] text-[26px] font-bold">
-                        {item.title.toUpperCase()}
+                      <div className="text-[26px] font-bold">
+                        <p
+                          className={`line-clamp-4 ${
+                            key === 1
+                              ? "w-[8.3rem]"
+                              : key === 2 || key === 3
+                              ? "w-[11rem]"
+                              : key === 4
+                              ? "w[10rem]"
+                              : ""
+                          } `}
+                        >
+                          {item.title.toUpperCase()}
+                        </p>
                       </div>
                       <Image
-                        className={`${key === 0 ? "w-[160px]" : "w-full"} ${
-                          key === 1 ? "absolute left-0 bottom-12" : ""
-                        } h-auto object-cover overflow-hidden`}
+                        className={`h-auto object-cover overflow-hidden ${
+                          key === 0 ? "w-[160px]" : "w-full"
+                        } ${key === 1 ? "absolute left-0 bottom-12" : ""}`}
                         src={item.icon}
                         alt=""
                         width={key === 0 ? 160 : 100}
@@ -125,7 +137,7 @@ export default function KnowledgeCenter() {
               {KnowledgeList.slice(2, 6).map((item, key) => (
                 <div
                   key={key}
-                  className="h-full flex flex-row bg-white border border-gray-200 rounded-3xl shadow-lg"
+                  className="h-full flex flex-row bg-white border border-gray-200 rounded-3xl shadow-sm"
                 >
                   <div className="w-[20.4rem] relative overflow-hidden rounded-l-3xl">
                     <div

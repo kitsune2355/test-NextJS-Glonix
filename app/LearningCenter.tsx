@@ -40,7 +40,7 @@ export default function LearningCenter() {
             {Learning.map((item, key) => (
               <div
                 key={key}
-                className="w-full p-6 bg-white border-gray-200 rounded-3xl shadow-lg"
+                className="w-full p-6 bg-white border-gray-200 rounded-3xl shadow-sm"
               >
                 <div className="flex flex-col justify-between space-y-4">
                   <div className="w-full h-[9rem]">
@@ -50,7 +50,15 @@ export default function LearningCenter() {
                         {item.title}
                       </div>
                     </div>
-                    <div className="text-lg text-[#6A6A6A]">{item.desc}</div>
+                    <div className="text-lg text-[#6A6A6A] w-[19rem]">
+                      <div
+                        className={`${
+                          key === 3 ? "w-[13.5rem]" : "w-[15.5rem]"
+                        } line-clamp-3`}
+                      >
+                        {item.desc}
+                      </div>
+                    </div>
                   </div>
                   <div className="flex justify-end">
                     <ArrowRight />

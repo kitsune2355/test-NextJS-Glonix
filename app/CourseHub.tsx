@@ -9,7 +9,7 @@ const courseHubList = [
     avatar: "/image/Ellipse5.png",
     img: "/image/Rectangle15.png",
     title: "ลงทุนหุ้นมั่นใจ ต้องเข้าใจปัจจัยพื้นฐาน",
-    desc: "รู้และเข้าใจปัจจัยที่ส่งผลกระทบต่อราคาหุ้น",
+    desc: "รู้และเข้าใจปัจจัยที่ส่งผล กระทบต่อราคาหุ้น",
     bgColor: "#FCFF8B",
     textColor: "#000",
     opacity: "90%",
@@ -62,7 +62,7 @@ export default function CourseHub() {
           children={
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {courseHubList.map((item, key) => (
-                <div key={key} className="w-full h-[548px]">
+                <div key={key} className="w-[19rem] h-[34.25rem]">
                   <CardImage
                     isCourseHub
                     courseTag={item.tag}

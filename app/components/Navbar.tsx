@@ -26,7 +26,7 @@ export default function Navbar() {
     <Container>
       <div className="relative w-full flex items-center justify-between">
         <div className="flex items-center justify-between space-x-8">
-          <h1 className="text-[#00665E] text-3xl font-semibold">LOGO</h1>
+          <h1 className="text-[#00665E] text-[34px] font-semibold">LOGO</h1>
           {/* Desktop */}
           <div className="hidden lg:flex space-x-8">
             {menu.map((item, key) => (
@@ -125,7 +125,7 @@ export default function Navbar() {
 
       {/* Mobile */}
       {isOpen && (
-        <div className="absolute w-[100vw] top-20 flex flex-col lg:hidden bg-[#1C1C29] shadow-lg rounded-b-lg ">
+        <div className="absolute w-[100vw] top-20 flex flex-col lg:hidden bg-[#1C1C29] shadow-sm rounded-b-lg ">
           {menu.map((item, key) => (
             <Link
               key={key}

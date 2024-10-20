@@ -14,7 +14,7 @@ const QuestionThread: React.FC = () => {
       <CardContainer
         title="ตั้งกระทู้คำถาม"
         children={
-          <div className="w-full h-full bg-white border border-gray-200 rounded-3xl shadow-lg p-12">
+          <div className="w-full h-full bg-white border border-gray-200 rounded-3xl shadow-sm p-12">
             <div className="flex-1 flex flex-col space-y-6">
               <div className="space-y-4">
                 <label htmlFor="default-input" className="text-xl font-bold">
@@ -35,7 +35,7 @@ const QuestionThread: React.FC = () => {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="bg-[#A8AD00] text-white w-full lg:w-[185px] px-[3.69rem] py-[0.63rem] rounded-xl"
+                  className="bg-[#A8AD00] hover:bg-[#00665E] text-2xl text-white w-full lg:w-[185px] px-[3.69rem] py-[0.63rem] rounded-xl"
                 >
                   ส่ง
                 </button>

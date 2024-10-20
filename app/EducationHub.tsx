@@ -45,7 +45,7 @@ export default function EducationHub() {
               {Education.map((item, key) => (
                 <div
                   key={key}
-                  className="w-full h-full bg-white border border-gray-200 rounded-3xl shadow-lg"
+                  className="w-full h-full bg-white border border-gray-200 rounded-3xl shadow-sm"
                 >
                   <div className="relative h-[152px] overflow-hidden rounded-t-3xl">
                     <div
@@ -56,11 +56,25 @@ export default function EducationHub() {
                       className="absolute inset-0"
                       style={{ backgroundColor: `${item.bgColor}` }}
                     ></div>
-                    <div className="p-6 absolute  text-white font-semibold">
+                    <div
+                      className={`line-clamp-3 p-6 absolute text-white font-semibold ${
+                        key === 0 || key === 1
+                          ? "w-[13rem]"
+                          : key === 2
+                          ? "w-[18rem]"
+                          : key === 3
+                          ? "w-[20rem]"
+                          : ""
+                      }`}
+                    >
                       {item.title}
                     </div>
                   </div>
-                  <div className="p-6 flex flex-col justify-between space-y-8">
+                  <div
+                    className={`p-6 flex flex-col justify-between space-y-8 ${
+                      key === 3 ? "" : "w-[17rem]"
+                    }`}
+                  >
                     <div>{item.desc}</div>
                     <div className="space-y-2">
                       <div>
