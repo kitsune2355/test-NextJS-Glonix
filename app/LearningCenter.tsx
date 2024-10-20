@@ -53,8 +53,8 @@ export default function LearningCenter() {
                     <div className="text-lg text-[#6A6A6A] w-[19rem]">
                       <div
                         className={`${
-                          key === 3 ? "w-[13.5rem]" : "w-[15.5rem]"
-                        } line-clamp-3`}
+                          key === 3 ? "md:w-[13.5rem]" : "md:w-[15.5rem]"
+                        } md:line-clamp-3`}
                       >
                         {item.desc}
                       </div>

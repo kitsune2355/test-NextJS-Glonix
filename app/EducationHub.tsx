@@ -57,13 +57,13 @@ export default function EducationHub() {
                       style={{ backgroundColor: `${item.bgColor}` }}
                     ></div>
                     <div
-                      className={`line-clamp-3 p-6 absolute text-white font-semibold ${
+                      className={`md:line-clamp-3 p-6 absolute text-white font-semibold ${
                         key === 0 || key === 1
-                          ? "w-[13rem]"
+                          ? "md:w-[13rem]"
                           : key === 2
-                          ? "w-[18rem]"
+                          ? "md:w-[18rem]"
                           : key === 3
-                          ? "w-[20rem]"
+                          ? "md:w-[20rem]"
                           : ""
                       }`}
                     >
@@ -72,7 +72,7 @@ export default function EducationHub() {
                   </div>
                   <div
                     className={`p-6 flex flex-col justify-between space-y-8 ${
-                      key === 3 ? "" : "w-[17rem]"
+                      key === 3 ? "" : "md:w-[17rem]"
                     }`}
                   >
                     <div>{item.desc}</div>

@@ -22,7 +22,7 @@ const CardContainer: React.FC<CardContainerProps> = ({
         {isButton && (
           <button
             type="button"
-            className="w-[135px] h-[42px] text-[#A8AD00] text-lg border-2 border-[#A8AD00] rounded-[59px] items-center"
+            className="w-[135px] h-[42px] bg-[#FCFAFA] text-[#A8AD00] text-lg border-2 border-[#A8AD00] rounded-[59px] items-center"
           >
             ดูทั้งหมด
           </button>

@@ -17,7 +17,7 @@ const KnowledgeList = [
     subTitle: "Data Engineer คืออะไร?",
     desc: "Data Engineer คือคนที่ทำงาน กับหลากหลายเครื่องมือ เพื่อรวบรวมข้อมูลจัดการข้อมูลและเปลี่ยนข้อมูลดิบ ให้พร้อมใช้งาน สำหรับทั้ง Data Scientist และ Data Analyst ",
     tag: "Data",
-    img: "/image/Rectangle5.png",
+    img: "/image/Rectangle54.png",
     icon: "/image/Isolation_Mode.png",
     bgColor: "#002E3DE5",
   },
@@ -57,35 +57,29 @@ export default function KnowledgeCenter() {
         isButton
         title="บทความและข่าวสารล่าสุด"
         children={
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="w-full grid grid-cols-1 gap-4">
               {KnowledgeList.slice(0, 2).map((item, key) => (
                 <div
                   key={key}
-                  className="h-[25.8rem] flex flex-row bg-white border border-gray-200 rounded-3xl shadow-sm"
+                  className="grid grid-cols-1 gap-1 md:grid-cols-7 bg-white border border-gray-200 rounded-3xl shadow-sm"
                 >
-                  <div className="w-full relative overflow-hidden rounded-l-3xl">
+                  <div className="col-span-3 relative overflow-hidden md:rounded-l-3xl">
                     <div
                       className="absolute inset-0 bg-cover bg-center"
                       style={{
                         backgroundImage: `url('${item.img}')`,
                       }}
-                    ></div>
+                    />
                     <div
                       className="absolute inset-0"
                       style={{ backgroundColor: `${item.bgColor}` }}
-                    ></div>
+                    />
                     <div className="pt-10 px-10 h-full absolute text-white flex flex-col justify-between items-center space-y-4">
                       <div className="text-[26px] font-bold">
                         <p
-                          className={`line-clamp-4 ${
-                            key === 1
-                              ? "w-[8.3rem]"
-                              : key === 2 || key === 3
-                              ? "w-[11rem]"
-                              : key === 4
-                              ? "w[10rem]"
-                              : ""
+                          className={`md:line-clamp-5 ${
+                            key === 1 ? "md:w-[8.3rem]" : ""
                           } `}
                         >
                           {item.title.toUpperCase()}
@@ -94,7 +88,7 @@ export default function KnowledgeCenter() {
                       <Image
                         className={`h-auto object-cover overflow-hidden ${
                           key === 0 ? "w-[160px]" : "w-full"
-                        } ${key === 1 ? "absolute left-0 bottom-12" : ""}`}
+                        } ${key === 1 ? "absolute left-4 bottom-12" : ""}`}
                         src={item.icon}
                         alt=""
                         width={key === 0 ? 160 : 100}
@@ -102,7 +96,7 @@ export default function KnowledgeCenter() {
                       />
                     </div>
                   </div>
-                  <div className="p-6 w-full">
+                  <div className="col-span-4 p-6 md:h-[413px]">
                     <div className="h-full flex flex-col justify-between space-y-12">
                       <div className="space-y-4">
                         <button
@@ -112,10 +106,16 @@ export default function KnowledgeCenter() {
                           {item.tag}
                         </button>
                         <div className="space-y-2">
-                          <div className="text-xl font-bold">
+                          <div className="text-xl font-bold md:line-clamp-2 md:w-[15rem]">
                             {item.subTitle}
                           </div>
-                          <div className="text-[#313131]">{item.desc}</div>
+                          <div
+                            className={`text-[#313131] md:line-clamp-6 ${
+                              key === 0 ? "md:w-[15rem]" : "md:w-[17rem]"
+                            } `}
+                          >
+                            {item.desc}
+                          </div>
                         </div>
                       </div>
                       <div className="space-y-4">
@@ -137,26 +137,26 @@ export default function KnowledgeCenter() {
               {KnowledgeList.slice(2, 6).map((item, key) => (
                 <div
                   key={key}
-                  className="h-full flex flex-row bg-white border border-gray-200 rounded-3xl shadow-sm"
+                  className="grid grid-cols-1 md:grid-cols-6 gap-1 bg-white border border-gray-200 rounded-3xl shadow-sm"
                 >
-                  <div className="w-[20.4rem] relative overflow-hidden rounded-l-3xl">
+                  <div className="col-span-2 relative overflow-hidden rounded-l-3xl">
                     <div
                       className="absolute inset-0 bg-cover bg-center"
                       style={{
                         backgroundImage: `url('${item.img}')`,
                       }}
-                    ></div>
+                    />
                     <div
                       className="absolute inset-0"
                       style={{ backgroundColor: `${item.bgColor}` }}
-                    ></div>
+                    />
                     <div className="p-6 h-full absolute text-white flex justify-between items-center">
-                      <div className="text-[24px] font-bold text-center">
+                      <div className="text-[24px] font-bold text-center md:line-clamp-3 md:w-[10rem]">
                         {item.title}
                       </div>
                     </div>
                   </div>
-                  <div className="p-6 w-full">
+                  <div className="col-span-4 p-6 md:h-[269px]">
                     <div className="space-y-4">
                       <button
                         type="button"

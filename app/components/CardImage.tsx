@@ -56,7 +56,7 @@ const CardImage: React.FC<CardImageProps> = ({
         >
           <div className="w-full h-full flex flex-col justify-between">
             <div className="relative transform md:-rotate-90 origin-center md:top-[4rem] md:right-[7.5rem] md:w-[279px]">
-              <p className="text-[26px] text-start font-bold w-[270px] line-clamp-2">
+              <p className="text-[26px] text-start font-bold md:w-[270px] md:line-clamp-2">
                 {title}
               </p>
             </div>
@@ -85,10 +85,10 @@ const CardImage: React.FC<CardImageProps> = ({
               >
                 {courseTag}
               </button>
-              <p className="text-[24px] font-bold line-clamp-4 w-[11.7rem]">
+              <p className="text-[24px] font-bold md:line-clamp-4 md:w-[11.7rem]">
                 {title}
               </p>
-              <p className="text-xl line-clamp-4 w-[14rem]">{desc}</p>
+              <p className="text-xl md:line-clamp-4 md:w-[14rem]">{desc}</p>
             </div>
             <div className="flex flex-row items-center space-x-2">
               <Image
@@ -116,7 +116,7 @@ const CardImage: React.FC<CardImageProps> = ({
             <p className="text-[32px] font-bold line-clamp-4 w-[16rem]">
               {title}
             </p>
-            <p className="text-2xl line-clamp-2 w-[18rem]">{desc}</p>
+            <p className="text-2xl md:line-clamp-2 md:w-[18rem]">{desc}</p>
           </div>
           <div className="flex flex-row items-center space-x-2">
             <Image
