@@ -1,4 +1,4 @@
-import { Navbar, Footer, Container, MainContent } from "./components";
+import { Navbar, Footer, MainContent } from "./components";
 import CourseHub from "./CourseHub";
 import EducationHub from "./EducationHub";
 import KnowledgeCenter from "./KnowledgeCenter";

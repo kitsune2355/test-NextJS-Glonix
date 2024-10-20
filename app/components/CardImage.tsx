@@ -14,6 +14,8 @@ interface CardImageProps {
   courseName?: string;
   coursePosition?: string;
   opacity?: string;
+  tagColor?: string;
+  borderColor?: string;
 }
 
 const CardImage: React.FC<CardImageProps> = ({
@@ -29,6 +31,8 @@ const CardImage: React.FC<CardImageProps> = ({
   courseName,
   coursePosition,
   opacity,
+  tagColor,
+  borderColor,
 }) => {
   const backgroundStyle = {
     backgroundImage: `url(${url})`,
@@ -43,6 +47,10 @@ const CardImage: React.FC<CardImageProps> = ({
 
   const textColorStyle = {
     color: `${textColor}`,
+  };
+
+  const tagColorStyle = {
+    color: `${tagColor}`,
   };
 
   return (
@@ -81,7 +89,8 @@ const CardImage: React.FC<CardImageProps> = ({
             <div className="space-y-6">
               <button
                 type="button"
-                className="px-4 py-2 text-[#7B7B7B] dark:text-[#B6B6B6] border border-[#7B7B7B] dark:border-[#D9D9D9] rounded-[59px] items-center"
+                style={tagColorStyle}
+                className={`px-4 py-2 rounded-[59px] items-center border border-[${borderColor}]`}
               >
                 {courseTag}
               </button>

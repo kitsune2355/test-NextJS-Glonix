@@ -12,6 +12,8 @@ const courseHubList = [
     desc: "รู้และเข้าใจปัจจัยที่ส่งผล กระทบต่อราคาหุ้น",
     bgColor: "#FCFF8B",
     textColor: "#000",
+    tagColor: "#7B7B7B",
+    borderColor: "#7B7B7B",
     opacity: "90%",
   },
   {
@@ -24,6 +26,8 @@ const courseHubList = [
     desc: "การพัฒนา Application ด้วยคอนเซ็ปท์ Progressive Web Application (PWA)",
     bgColor: "#000D2E",
     textColor: "#fff",
+    tagColor: "#B6B6B6",
+    borderColor: "#D9D9D9",
     opacity: "90%",
   },
   {
@@ -36,6 +40,8 @@ const courseHubList = [
     desc: "เรียนรู้การเขียน React Hooks แบบ Best Practice",
     bgColor: "#95FFE5",
     textColor: "#000",
+    tagColor: "#7B7B7B",
+    borderColor: "#7B7B7B",
     opacity: "90%",
   },
   {
@@ -48,6 +54,8 @@ const courseHubList = [
     desc: "ปลดล็อกขีดจำกัดการทำงานด้วยพลัง AI",
     bgColor: "#06002E",
     textColor: "#fff",
+    tagColor: "#B6B6B6",
+    borderColor: "#D9D9D9",
     opacity: "69%",
   },
 ];
@@ -55,6 +63,10 @@ const courseHubList = [
 export default function CourseHub() {
   return (
     <div className="relative">
+      <div className="absolute top-[24rem] left-[16rem] right-[16rem] mx-auto max-w-[75vw] hidden lg:flex flex-row justify-between transform -translate-y-1/2">
+        <ArrowCircleLeft />
+        <ArrowCircleRight />
+      </div>
       <Container>
         <CardContainer
           isButton
@@ -75,6 +87,8 @@ export default function CourseHub() {
                     bgColor={item.bgColor}
                     textColor={item.textColor}
                     opacity={item.opacity}
+                    tagColor={item.tagColor}
+                    borderColor={item.borderColor}
                   />
                 </div>
               ))}
@@ -82,10 +96,6 @@ export default function CourseHub() {
           }
         />
       </Container>
-      <div className="absolute top-[22rem] left-[16rem] right-[16rem] mx-auto max-w-[75vw] hidden lg:flex flex-row justify-between transform -translate-y-1/2">
-        <ArrowCircleLeft />
-        <ArrowCircleRight />
-      </div>
     </div>
   );
 }
